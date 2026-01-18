@@ -419,6 +419,7 @@ while [[ $RETRY_COUNT -lt $MAX_RETRIES ]]; do
 			echo "Resource limitation detected."
 		# If error is not resource-related, don't retry
 		else
+			cat "create-server.json"
 			cat "servers.json"
 			exit_with_failure "Failed to create Server in Hetzner Cloud!"
 		fi
